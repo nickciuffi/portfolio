@@ -1,0 +1,79 @@
+
+.container{
+  height: 3000px;
+  width: 100%;
+  background-color: #040238;
+  overflow: hidden;
+
+    .name-shower{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    
+      p{
+        color: rgb(235, 235, 235);
+      }
+      .name-comp{
+        font-size: 40px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+      }
+      .pre, .pos{
+        position: absolute;
+      }
+      .pre{
+        top: 15%;
+        left: 10%;
+        animation-name: show-from-left;
+        animation-duration: 3s;
+        animation-delay: 1s;
+      }
+      .pos{
+        bottom: 15%;
+        right: 10%;
+        animation-name: show-from-right;
+        animation-duration: 3s;
+        animation-delay: 2s;
+      }
+      .name-cont{
+        background-color: #312e81;
+        width: 100%;
+        padding: 60px 0px;
+        position: relative;
+             
+      }
+      .name{
+        font-size: 64px;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 5px;
+        width: fit-content;
+        text-align: center;
+        animation-name: name-move;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        white-space: nowrap;
+        animation-timing-function: ease-in-out;
+      }
+  }
+}
+
+
+
+@keyframes name-move {
+  0%{margin-left: 100px;}
+ 50% {margin-left: 100%;transform: translateX(calc(-100% - 100px));}
+ 100% {margin-left: 100px;}
+}
+
+@keyframes show-from-left{
+  from {left: -60%;}
+  to{left: 10%;}
+}
+
+@keyframes show-from-right{
+  from {right: -60%;}
+  to{right: 10%;}
+}
