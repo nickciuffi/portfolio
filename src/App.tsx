@@ -9,6 +9,7 @@ function App() {
       <div className="name-cont">
       <p className='name'>NICOLAS CIUFFI</p>
       </div>    
+     
       <p className='pos name-comp'>I`m a Web Developer</p>  
       </div>
     </div>
