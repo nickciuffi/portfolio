@@ -1,11 +1,15 @@
 body, html, #root {
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    color: #dbeafe;
+    font-family: 'Inter', sans-serif;
   }
+
 
   

@@ -1,19 +1,49 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.scss'
+import { NameShower } from './components/NameShower'
+import { Header } from './components/Header'
+import { ProjectsShower } from './components/ProjectsShower';
 
 function App() {
+
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [hasHeaderChanged, setHasHeaderChanged] = useState(false);
+
+  const observer = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+      
+      if(entry.target.id === 'top'){
+        
+          setIsHeaderVisible(!entry.isIntersecting)
+          if(!hasHeaderChanged && !entry.isIntersecting){
+            setHasHeaderChanged(true)
+          }
+
+      }
+    })
+     });
+
+    useEffect(() => {
+      const screenTop = document.querySelector('#top') as Element;
+      try{
+        observer.observe(screenTop)
+      }
+      catch(e){
+        console.log(e)
+      }
+    }, [])
+
   return (
     <div className="container">
-      <div className='name-shower'>
-      <p className="pre name-comp">Olá, meu nome é</p>
-      <div className="name-cont">
-      <p className='name'>NICOLAS CIUFFI</p>
-      </div>    
-     
-      <p className='pos name-comp'>I`m a Web Developer</p>  
-      </div>
+       <div id='top'/>
+      <Header isVisible={isHeaderVisible} hasHeaderChanged={hasHeaderChanged} />
+      <NameShower />
+      <ProjectsShower />
     </div>
   )
+
+
+  
 }
 
 export default App
