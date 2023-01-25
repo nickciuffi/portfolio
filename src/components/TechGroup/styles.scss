@@ -1,0 +1,90 @@
+.tech-group{
+
+    flex-direction: row;
+    position: absolute;
+    display: flex;
+
+    &.initial{
+        display: none !important;
+    }
+
+    &.up{
+        
+        &.activated{
+        animation: up-on 2s forwards;
+        }
+        &.deactivated{
+            animation: up-off 2s forwards;
+        }
+    }
+    &.down{
+        &.activated{
+        animation: down-on 2s forwards;
+        }
+        &.deactivated{
+            animation: down-off 2s forwards;
+            }
+    }
+
+    &.down.activated, &.up.activated{
+        display: flex;
+        .tech{
+            animation: grow-on 2s forwards;
+        }
+    }
+    &.down.deactivated, &.up.deactivated{
+        display: flex;
+        .tech{
+            animation: grow-off 2s forwards;
+        }
+    }
+
+    .tech{
+        width: 130px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20%;
+
+        &.purple{
+            background-color: #3730A3;
+        }
+        &.white{
+            background-color: #C7D2FE;
+        }
+
+        img{
+            max-width: 80%;
+            max-height: 80%;
+        }
+    }
+}
+
+
+@keyframes up-on {
+    0% {opacity: 0;top: 45%; gap: 0px; }
+    100% { opacity: 1;top: 12%; gap: 30px;}
+}
+@keyframes up-off {
+    0% { opacity: 1;top: 12%; gap: 30px;}
+    100% {opacity: 0;top: 45%; gap: 0px; }
+}
+
+@keyframes down-on {
+    from {bottom: 45%; gap: 0px; opacity: 0;}
+    to {bottom: 12%; gap: 30px; opacity: 1;}
+}
+@keyframes down-off {
+    from {bottom: 12%; gap: 30px; opacity: 1;}
+    to {bottom: 45%; gap: 0px; opacity: 0;}
+}
+
+@keyframes grow-on {
+    from {width: 10px; opacity: 0;}
+    to{width: 130px; opacity: 1;}
+}
+@keyframes grow-off {
+    from {width: 130px; opacity: 1;}
+    to {width: 10px; opacity: 0;}
+}

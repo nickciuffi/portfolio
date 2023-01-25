@@ -3,6 +3,7 @@ import './App.scss'
 import { NameShower } from './components/NameShower'
 import { Header } from './components/Header'
 import { ProjectsShower } from './components/ProjectsShower';
+import { StackShower } from './components/StackShower';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
        <div id='top'/>
       <Header isVisible={isHeaderVisible} hasHeaderChanged={hasHeaderChanged} />
       <NameShower />
+      <StackShower />
       <ProjectsShower />
     </div>
   )

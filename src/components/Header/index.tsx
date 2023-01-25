@@ -13,7 +13,7 @@ export function Header(props: HeaderProps){
             <a className="link" href="#top">
                 <FaHome />
                 </a>
-            <a className="link">
+            <a className="link" href="#technologies-start">
                 Tecnologias
             </a>
             <a className="link">

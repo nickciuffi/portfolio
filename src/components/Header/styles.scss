@@ -5,7 +5,7 @@
     padding: 20px 30%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     z-index: 100;
     box-shadow: 0px 12px 19px -10px #4338CA;
     display: none;
@@ -27,6 +27,8 @@
         font-size: 20px;
         cursor: pointer;
         transition: .3s;
+        text-decoration: none;
+        min-width: 45px;
 
         &:hover{
             filter: brightness(.8);
