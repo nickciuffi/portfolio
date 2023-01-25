@@ -1,0 +1,24 @@
+.tech-name{
+    position: absolute;
+    top: 0;
+    padding-bottom: 25px;
+    
+    
+
+    &.active{
+        animation: showName 1s forwards;
+    }
+    &.inactive{
+        animation: hideName 1s forwards;
+    }
+}
+
+@keyframes showName {
+    from{ transform: translateY(0); opacity: 0;}
+    to{transform: translateY(-90%); opacity: 1;}
+}
+
+@keyframes hideName {
+    from{ transform: translateY(-90%); opacity: 1;}
+    to{transform: translateY(0); opacity: 0;}
+}

@@ -40,16 +40,23 @@ export function StackShower(){
                 <div className="front">
                    <TechGroup
                    leftImg={IconJs}
+                   leftText={"JavaScript"}
                    centerImg={IconHtml}
+                   centerText={"HTML"}
                    rightImg={IconSass}
+                   rightText={"Sass"}
                    activated={frontActivated} 
                    direction={'up'}
-                    hasChanged={hasFrontChanged} 
-                    />
+                    hasChanged={hasFrontChanged} />
+                        
+                      
                    <TechGroup 
                    leftImg={IconReact}
+                   leftText={"ReactJs"}
                    centerImg={IconPrisma}
+                   centerText={"Prisma"}
                    rightImg={IconNext}
+                   rightText={"NextJs"}
                    activated={frontActivated}
                     direction={'down'} 
                     hasChanged={hasFrontChanged}
@@ -61,14 +68,26 @@ export function StackShower(){
                 <div className="back">
                     <TechGroup 
                      leftImg={IconTs}
+                     leftText={"TypeSript"}
                      centerImg={IconDocker}
+                     centerText={"Docker"}
                      rightImg={IconFirebase}
-                    activated={backActivated} direction={'up'} hasChanged={hasBackChanged} />
+                     rightText={"Firebase"}
+                    activated={backActivated} 
+                    direction={'up'} 
+                    hasChanged={hasBackChanged} 
+                    />
                     <TechGroup 
                      leftImg={IconGc}
+                     leftText={"Google Cloud"}
                      centerImg={IconMysql}
+                     centerText={"MySql"}
                      rightImg={IconNode}
-                    activated={backActivated} direction={'down'} hasChanged={hasBackChanged} />
+                     rightText={"NodeJs"}
+                     activated={backActivated}
+                     direction={'down'} 
+                     hasChanged={hasBackChanged}
+                     />
                      <PulsingButton active={!backActivated} text="Back-End" onClick={(e) => handleShowTechs(e)}  />
                         </div>
             </div>
