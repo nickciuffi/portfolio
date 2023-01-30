@@ -16,6 +16,7 @@
     .title{
         position: absolute;
         top: 0;
+        font-size: 36px;
     }
 
     .techs{
@@ -28,18 +29,15 @@
         height: 100%;
 
         .front, .back{
-            
             position: relative;
-            height: 100%;
+            height: 80%;
             display: flex;
             align-items: center;
             width: 50%;
             justify-content: center;
-
-           
-
             
         }
+       
         .central-line{
             width: 2px;
             height: 85%;

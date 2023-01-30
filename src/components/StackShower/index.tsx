@@ -1,19 +1,8 @@
 import React, { useState } from "react";
 import { TechGroup } from "../TechGroup";
 import './styles.scss';
-import IconJs from '../../../public/images/icon-js.png';
-import IconHtml from '../../../public/images/icon-html.png';
-import IconSass from '../../../public/images/icon-sass.png';
-import IconReact from '../../../public/images/icon-react.png'
-import IconPrisma from '../../../public/images/icon-prisma.png'
-import IconNext from '../../../public/images/icon-next.png'
-import IconTs from '../../../public/images/icon-ts.png'
-import IconDocker from '../../../public/images/icon-docker.png'
-import IconFirebase from '../../../public/images/icon-firebase.png'
-import IconGc from '../../../public/images/icon-gc.png'
-import IconMysql from '../../../public/images/icon-mysql.png'
-import IconNode from '../../../public/images/icon-node.png'
-import { PulsingButton } from "../pulsingButton";
+import {IconDocker, IconFirebase, IconGc, IconHtml, IconJs, IconMysql, IconNext, IconNode, IconPrisma, IconReact, IconSass, IconTs} from '../../utils/icons';
+import {PulsingButton} from "../pulsingButton";
 
 
 export function StackShower(){
@@ -37,7 +26,7 @@ export function StackShower(){
             <div id="technologies-start"></div>
             <h1 className="title" >Tecnologias</h1>
             <div className="techs">
-                <div className="front">
+                <div className="front hidden left">
                    <TechGroup
                    leftImg={IconJs}
                    leftText={"JavaScript"}
@@ -65,7 +54,7 @@ export function StackShower(){
                         
                     </div>
                     <div className="central-line"></div>
-                <div className="back">
+                <div className="back hidden right">
                     <TechGroup 
                      leftImg={IconTs}
                      leftText={"TypeSript"}

@@ -66,19 +66,19 @@
 
 @keyframes up-on {
     0% {opacity: 0;top: 45%; gap: 0px; }
-    100% { opacity: 1;top: 12%; gap: 30px;}
+    100% { opacity: 1;top: 0%; gap: 30px;}
 }
 @keyframes up-off {
-    0% { opacity: 1;top: 12%; gap: 30px;}
+    0% { opacity: 1;top: 0%; gap: 30px;}
     100% {opacity: 0;top: 45%; gap: 0px; }
 }
 
 @keyframes down-on {
     from {bottom: 45%; gap: 0px; opacity: 0;}
-    to {bottom: 12%; gap: 30px; opacity: 1;}
+    to {bottom: 0%; gap: 30px; opacity: 1;}
 }
 @keyframes down-off {
-    from {bottom: 12%; gap: 30px; opacity: 1;}
+    from {bottom: 0%; gap: 30px; opacity: 1;}
     to {bottom: 45%; gap: 0px; opacity: 0;}
 }
 

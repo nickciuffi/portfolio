@@ -12,21 +12,32 @@ function App() {
 
   const observer = new IntersectionObserver((entries) =>{
     entries.forEach(entry =>{
-      
       if(entry.target.id === 'top'){
         
           setIsHeaderVisible(!entry.isIntersecting)
           if(!hasHeaderChanged && !entry.isIntersecting){
             setHasHeaderChanged(true)
           }
+          return 
+      }
+      if(entry.target.classList.contains('hidden')){
+        if(entry.isIntersecting){
 
+          entry.target.classList.add('show')
+        }
+        else{
+          entry.target.classList.remove('show')
+        }
       }
     })
      });
 
     useEffect(() => {
       const screenTop = document.querySelector('#top') as Element;
+      const hidden = document.querySelectorAll('.hidden') as NodeListOf<Element>;
       try{
+        
+        hidden.forEach((el) => observer.observe(el))
         observer.observe(screenTop)
       }
       catch(e){

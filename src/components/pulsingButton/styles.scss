@@ -1,8 +1,8 @@
 .pulsating{
     background-color: #6366F1;
-    padding: 15px;
+    padding: 25px;
     border-radius: 20px;
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     cursor: pointer;
     transition: .3s all;
     z-index: 50;
@@ -19,17 +19,17 @@
 
 @keyframes pulse {
 	0% {
-		transform: scale(0.92);
+		transform: scale(0.90);
 		box-shadow: 0 0 0 0 rgba(57, 11, 195, 0.815);
 	}
 
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 13px rgba(0, 0, 0, 0);
 	}
 
 	100% {
-		transform: scale(0.92);
+		transform: scale(0.9);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
 }
