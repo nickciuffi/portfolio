@@ -4,6 +4,7 @@ import { NameShower } from './components/NameShower'
 import { Header } from './components/Header'
 import { ProjectsShower } from './components/ProjectsShower';
 import { StackShower } from './components/StackShower';
+import { Footer } from './components/Footer';
 
 function App() {
 
@@ -52,7 +53,9 @@ function App() {
       <NameShower />
       <StackShower />
       <ProjectsShower />
+      <Footer />
     </div>
+    
   )
 
 

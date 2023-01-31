@@ -53,7 +53,7 @@ export function StackShower(){
                         <PulsingButton active={!frontActivated} text="Front-End" onClick={(e) => handleShowTechs(e)}  />
                         
                     </div>
-                    <div className="central-line"></div>
+                    <div className="central-line mobile-hide"></div>
                 <div className="back hidden right">
                     <TechGroup 
                      leftImg={IconTs}

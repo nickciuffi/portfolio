@@ -17,15 +17,15 @@
         }
         .pre{
           top: 15%;
-          left:10%;
+          left:8%;
           opacity: 0;
-          animation: show-from-left 3s forwards;
+          animation: show-from-left-mob 3s forwards;
         }
         .pos{
           bottom: 15%;
-          right: 10%;
+          right: 8%;
           opacity: 0;
-          animation: show-from-right 3s forwards;
+          animation: show-from-right-mob 3s forwards;
           
           animation-delay: 1s;
         }
@@ -59,6 +59,41 @@
    100% {margin-left: 100px;}
   }
   
+
+  @media only screen and (max-width: 768px){
+    .name-shower{
+     
+      .name-comp{
+        font-size: 25px;
+        
+        font-weight: 600;
+      }
+      .pre{
+        left:8%;
+      }
+      .pos{
+        bottom: 12%;
+        right: 8%;
+        text-align: end;
+        max-width: 70%;
+        height: 80px;
+        line-height: 40px;
+       
+      }
+      .name-cont{
+        
+        padding: 60px 0px;
+       
+      }
+      .name{
+        font-size: 40px;
+        letter-spacing: 3px;
+        
+    
+      }
+    }
+  }
+
   @keyframes show-from-left{
     from {left: -60%; opacity: 0;}
     to{left: 10%; opacity: 1;}
@@ -67,4 +102,13 @@
   @keyframes show-from-right{
     0% {right: -60%;opacity:0}
     100%{right: 10%; opacity: 1;}
+  }
+  @keyframes show-from-left-mob{
+    from {left: -60%; opacity: 0;}
+    to{left: 8%; opacity: 1;}
+  }
+  
+  @keyframes show-from-right-mob{
+    0% {right: -60%;opacity:0}
+    100%{right: 8%; opacity: 1;}
   }

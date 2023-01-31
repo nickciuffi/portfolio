@@ -23,10 +23,10 @@ body, html, #root {
       transition: all 2s;
       filter: blur(5px);
       &.left{
-        transform: translateX(-105%);
+        transform: translateX(-100%);
       }
       &.right{
-        transform: translateX(105%);
+        transform: translateX(100%);
       }
     
   }
@@ -36,4 +36,15 @@ body, html, #root {
       transform: translateX(0) !important;
   }
 
-  
+  @media only screen and (min-width: 768px){
+  .mobile-show{
+    display: none !important;
+  }
+}
+
+  @media only screen and (max-width: 768px){
+    .mobile-hide{
+      display: none !important;
+    }
+    
+  }

@@ -63,6 +63,47 @@
     }
 }
 
+@media only screen and (max-width: 768px){
+    .tech-group{
+
+        &.up{
+            
+            &.activated{
+            animation: up-on-mob 2s forwards;
+            }
+            &.deactivated{
+                animation: up-off-mob 2s forwards;
+            }
+        }
+        &.down{
+            &.activated{
+            animation: down-on-mob 2s forwards;
+            }
+            &.deactivated{
+                animation: down-off-mob 2s forwards;
+                }
+        }
+    
+        &.down.activated, &.up.activated{
+            display: flex;
+            .tech{
+                animation: grow-on-mob 2s forwards;
+            }
+        }
+        &.down.deactivated, &.up.deactivated{
+            display: flex;
+            .tech{
+                animation: grow-off-mob 2s forwards;
+            }
+        }
+    
+        .tech{
+            width: 100px;
+           
+        }
+    }
+}
+
 
 @keyframes up-on {
     0% {opacity: 0;top: 45%; gap: 0px; }
@@ -88,5 +129,33 @@
 }
 @keyframes grow-off {
     from {width: 130px; opacity: 1;}
+    to {width: 10px; opacity: 0;}
+}
+
+//mobile
+@keyframes up-on-mob {
+    0% {opacity: 0;top: 45%; gap: 0px; }
+    100% { opacity: 1;top: 10%; gap: 15px;}
+}
+@keyframes up-off-mob {
+    0% { opacity: 1;top: 10%; gap: 15px;}
+    100% {opacity: 0;top: 45%; gap: 0px; }
+}
+
+@keyframes down-on-mob {
+    from {bottom: 45%; gap: 0px; opacity: 0;}
+    to {bottom: 10%; gap: 15px; opacity: 1;}
+}
+@keyframes down-off-mob {
+    from {bottom: 10%; gap: 15px; opacity: 1;}
+    to {bottom: 45%; gap: 0px; opacity: 0;}
+}
+
+@keyframes grow-on-mob {
+    from {width: 10px; opacity: 0;}
+    to{width: 95px; opacity: 1;}
+}
+@keyframes grow-off-mob {
+    from {width: 95px; opacity: 1;}
     to {width: 10px; opacity: 0;}
 }
