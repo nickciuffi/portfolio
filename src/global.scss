@@ -46,5 +46,11 @@ body, html, #root {
     .mobile-hide{
       display: none !important;
     }
+    .hidden-item:nth-child(2){
+      transition-delay: 0s;
+    }
+  .hidden-item:nth-child(3){
+      transition-delay: 0s;
+    }
     
   }
