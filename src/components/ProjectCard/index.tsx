@@ -17,7 +17,7 @@ export function ProjectCard(props: ProjectCardProps){
 
     
     return(
-    <div className='project-card'>
+    <div className='project-card hidden left hidden-item'>
         <h2 className="card-title">{props.title}</h2>
         <div className="proj-img">
             <LazyLoad height={180} offset={800}>
