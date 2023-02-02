@@ -5,7 +5,7 @@ import {IconDocker, IconFirebase, IconGc, IconHtml, IconJs, IconMysql, IconNext,
 import {PulsingButton} from "../pulsingButton";
 
 
-export function StackShower(){
+export default function StackShower(){
 
     const [frontActivated, setFrontActivated] = useState(false);
     const [backActivated, setBackActivated] = useState(false);

@@ -1,6 +1,8 @@
+@import '../../colors.scss';
+
 .footer{
-    border-top: 3px #C7D2FE solid;
-    background-color: #030124;
+    border-top: 3px $base-color-100 solid;
+    background-color: $base-color-950;
     margin-top: 40px;
     height: 200px;
     padding: 20px;
@@ -44,7 +46,7 @@
             flex-direction: column;
             gap: 30px;
             
-            align-items: flex-start;
+            align-items: center;
             height: 100%;
     
             .cont{

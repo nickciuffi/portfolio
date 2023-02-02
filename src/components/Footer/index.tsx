@@ -3,7 +3,7 @@ import {FiMail} from 'react-icons/fi';
 import {BsLinkedin, BsGithub} from 'react-icons/bs'
 import './styles.scss'
 
-export function Footer(){
+export default function Footer(){
     return(
         <div className="footer">
             <p className="designed-by">Designed by: Nicolas Ciuffi</p>

@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.scss'
 import { NameShower } from './components/NameShower'
-import { Header } from './components/Header'
-import { ProjectsShower } from './components/ProjectsShower';
-import { StackShower } from './components/StackShower';
-import { Footer } from './components/Footer';
+const Header = React.lazy(() =>import('./components/Header'))
+const ProjectsShower = React.lazy(() => import('./components/ProjectsShower'));
+const StackShower = React.lazy(() => import('./components/StackShower'));
+const Footer = React.lazy(() => import('./components/Footer'));
 
 function App() {
 

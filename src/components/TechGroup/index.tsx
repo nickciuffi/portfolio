@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './styles.scss'
 import { TechName } from "../TechName";
+import LazyLoad from 'react-lazy-load';
 
 type TechGroupProps = {
     activated: boolean,
@@ -84,15 +85,15 @@ export function TechGroup(props: TechGroupProps){
         <div className={`tech-group ${props.hasChanged ? '' : 'initial'} ${props.direction} ${props.activated ? 'activated' : 'deactivated'}`}>
                     <div id='tech-1' className="tech purple" onMouseEnter={(e) => handleHover(e)} onMouseLeave={(e) => handleHoverOut(e)}>
                     <TechName isActive={leftActive}>{props.leftText}</TechName>
-                    <img src={props.leftImg} alt={props.leftText} />
+                    <img loading='lazy' src={props.leftImg} alt={props.leftText} />
                     </div>
                     <div id='tech-2' className="tech white" onMouseEnter={(e) => handleHover(e)} onMouseLeave={(e) => handleHoverOut(e)}>
                     <TechName isActive={centerActive}>{props.centerText}</TechName>
-                        <img src={props.centerImg} alt={props.centerText} />
+                        <img loading='lazy' src={props.centerImg} alt={props.centerText} />
                     </div>
                     <div id='tech-3' className="tech purple" onMouseEnter={(e) => handleHover(e)} onMouseLeave={(e) => handleHoverOut(e)}>
                     <TechName isActive={rightActive}>{props.rightText}</TechName>
-                        <img src={props.rightImg} alt={props.rightText} />
+                        <img loading='lazy' src={props.rightImg} alt={props.rightText} />
                     </div>
                     </div>
     )

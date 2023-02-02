@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './styles.scss'
 import {AiFillGithub} from 'react-icons/ai';
 import WebIcon from '/images/icon-www.png';
+import LazyLoad from 'react-lazy-load'
 
 type ProjectCardProps = {
     title: string,
@@ -16,10 +17,12 @@ export function ProjectCard(props: ProjectCardProps){
 
     
     return(
-    <div className='project-card hidden left hidden-item'>
+    <div className='project-card'>
         <h2 className="card-title">{props.title}</h2>
         <div className="proj-img">
-        <img src={props.img} />
+            <LazyLoad height={180} offset={800}>
+        <img src={props.img} alt={props.title} />
+        </LazyLoad>
         </div>
        
         <p className='tech-used'>{props.tech}</p>
@@ -31,7 +34,7 @@ export function ProjectCard(props: ProjectCardProps){
             </a>
             {props.accessLink ? (
                 <a href={props.accessLink}>
-                <img src={WebIcon} />
+                <img src={WebIcon} alt='www-icon' width={35} height={37} />
                 Access
                 </a>
             )

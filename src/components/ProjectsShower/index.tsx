@@ -9,7 +9,7 @@ import imgRizaSementes from '/images/prints/riza-sementes.jpg'
 import imgYvyReciclagem from '/images/prints/yvy-reciclagem.jpg'
 import imgSpaceInvaded from '/images/prints/space-invaded.jpg'
 
-export function ProjectsShower(){
+export default function ProjectsShower(){
     return(
         <div className='projects-shower'>
             <div id="projects-start"></div>

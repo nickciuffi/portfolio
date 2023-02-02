@@ -8,7 +8,7 @@ type HeaderProps = {
     hasHeaderChanged: boolean,
 }
 
-export function Header(props: HeaderProps){
+export default function Header(props: HeaderProps){
 
     const [hasSideChanged, setHasSideChanged] = useState(false);
     const [isSideVisible, setIsSideVisible] = useState(false);
@@ -33,7 +33,7 @@ export function Header(props: HeaderProps){
             <a className="link mobile-hide" href="#projects-start">
                 Projetos
             </a>
-            <a className="link mobile-show" onClick={() => {
+            <a className="link mobile-show" href="#" onClick={() => {
                 console.log(isSideVisible)
                 setHasSideChanged(true);
                 setIsSideVisible(true);

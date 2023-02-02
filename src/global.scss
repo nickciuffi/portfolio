@@ -1,3 +1,5 @@
+@import 'colors.scss';
+
 body, html, #root {
     height: 100%;
     overflow-x: hidden;
@@ -7,7 +9,7 @@ body, html, #root {
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    color: #dbeafe;
+    color: $base-color-100;
     font-family: 'Inter', sans-serif;
   }
 
@@ -36,7 +38,7 @@ body, html, #root {
       transform: translateX(0) !important;
   }
 
-  @media only screen and (min-width: 768px){
+  @media only screen and (min-width: 769px){
   .mobile-show{
     display: none !important;
   }
