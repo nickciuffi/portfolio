@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import { FaHome } from 'react-icons/fa'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import './styles.scss'
+import LogoNC from '/images/logo-white.png'
 
 type HeaderProps = {
     isVisible: boolean,
@@ -25,11 +26,15 @@ export default function Header(props: HeaderProps){
         <>
         <header className={`header-cont ${props.hasHeaderChanged ? '' : 'initial'} ${props.isVisible ? 'show-header' : 'not-show-header'}`}>
             <a className="link mobile-hide" href="#top">
-                <FaHome />
+                <img src={LogoNC} alt='Logo Nicolas Ciuffi' width={50} />
                 </a>
+                <a className="link mobile-hide" href="#know-more-start">
+                Saiba Mais
+            </a>
             <a className="link mobile-hide" href="#technologies-start">
                 Tecnologias
             </a>
+           
             <a className="link mobile-hide" href="#projects-start">
                 Projetos
             </a>
@@ -46,8 +51,11 @@ export default function Header(props: HeaderProps){
         </header>
         <div className={`side-nav ${hasSideChanged ? '' : 'initial'} ${isSideVisible ? "show" : "not-show"}`}>
         <a className="link" href="#top" onClick={() => setIsSideVisible(false)}>
-           <FaHome size={20} />
+        <img src={LogoNC} alt='Logo Nicolas Ciuffi' width={50} />
            </a>
+           <a className="link" href="#know-more-start" onClick={() => setIsSideVisible(false)}>
+           Saiba Mais
+       </a>
        <a className="link" href="#technologies-start" onClick={() => setIsSideVisible(false)}>
            Tecnologias
        </a>

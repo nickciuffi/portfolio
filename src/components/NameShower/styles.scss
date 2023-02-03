@@ -54,11 +54,7 @@
   
   
   
-  @keyframes name-move {
-    0%{margin-left: 100px;}
-   50% {margin-left: 100%;transform: translateX(calc(-100% - 100px));}
-   100% {margin-left: 100px;}
-  }
+  
   
 
   @media only screen and (max-width: 768px){
@@ -73,12 +69,13 @@
         left:8%;
       }
       .pos{
-        bottom: 12%;
+        bottom: 13%;
         right: 8%;
         text-align: end;
-        max-width: 70%;
-        height: 80px;
-        line-height: 40px;
+        max-width: 60%;
+        height: 12%;
+        display: flex;
+        align-items: center;
        
       }
       .name-cont{
@@ -89,7 +86,7 @@
       .name{
         font-size: 40px;
         letter-spacing: 3px;
-        
+        animation: name-move-mob 5s infinite ease-in-out;
     
       }
     }
@@ -112,4 +109,14 @@
   @keyframes show-from-right-mob{
     0% {right: -60%;opacity:0}
     100%{right: 8%; opacity: 1;}
+  }
+  @keyframes name-move {
+    0%{margin-left: 100px;}
+   50% {margin-left: 100%;transform: translateX(calc(-100% - 100px));}
+   100% {margin-left: 100px;}
+  }
+  @keyframes name-move-mob {
+    0%{margin-left: 50px;}
+   50% {margin-left: 100%;transform: translateX(calc(-100% - 50px));}
+   100% {margin-left: 50px;}
   }

@@ -24,7 +24,7 @@ export default function StackShower(){
     return (
         <div className="stack-cont">
             <div id="technologies-start"></div>
-            <h1 className="title" >Tecnologias</h1>
+            <h1 className="title" >Tecnologias que uso</h1>
             <div className="techs">
                 <div className="front hidden left">
                    <TechGroup

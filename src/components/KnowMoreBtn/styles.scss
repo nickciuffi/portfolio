@@ -1,0 +1,85 @@
+@import '../../colors.scss';
+
+.know-more-btn{
+    position: absolute;
+    left: 8%;
+    bottom: 12%;
+    background-color: $secondary-color-500;
+    padding: 20px 15px;
+    border-radius: 15px;
+    border: 3px solid $secondary-color-100;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: all .3s;
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+    text-decoration-color: transparent;
+
+    &.active{
+        animation: fade-up-on 1s forwards;
+        display: flex;
+    }
+    &.inactive{
+        animation: fade-up-off .5s forwards;
+        display: flex;
+    }
+    &.initial{
+        display:none;
+    }
+
+
+    &:hover{
+        filter: brightness(.8)
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .know-more-btn{
+       flex-direction: column;
+        left: 5%;
+        bottom: 15%;
+        background-color: $secondary-color-500;
+        padding: 7px;
+        border: 2px solid $secondary-color-100;
+        font-size: 15px;
+        gap: 6px;
+        height: 12%;
+        
+
+        &.active{
+            animation: fade-up-mobile-on 1s forwards;
+            display: flex;
+        }
+        &.inactive{
+            animation: fade-up-mobile-off .5s forwards;
+            display: flex;
+        }
+        &.initial{
+            display:none;
+        }
+    }
+}
+
+@keyframes fade-up-on{
+    0% {opacity: 0; bottom: -100%;}
+    100% {opacity: 1; bottom: 12%;}
+}
+@keyframes fade-up-off{
+    0% {opacity: 1; bottom: 12%;}
+    100% {opacity: 0; bottom: -100%;}
+}
+@keyframes fade-up-mobile-on{
+    0% {opacity: 0; bottom: -100%;}
+    100% {opacity: 1; bottom: 13%;}
+}
+@keyframes fade-up-mobile-off{
+    0% {opacity: 1; bottom: 13%;}
+    100% {opacity: 0; bottom: -100%;}
+}

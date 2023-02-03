@@ -1,0 +1,43 @@
+.know-more{
+    min-height: 75vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 23%;
+    width: 100%;
+    flex-direction: column;
+
+    #know-more-start{
+       
+            position: absolute;
+            top: -95px;
+        
+    }
+
+    .title{
+        position: absolute;
+        top: 0;
+        font-size: 36px;
+    }
+    p{
+        font-size: 25px;
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .know-more{
+       
+        padding: 20% 5%;
+    
+        .title{
+            font-size: 32px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    }
+}
