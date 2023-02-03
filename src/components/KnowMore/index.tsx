@@ -4,7 +4,7 @@ export function KnowMore(){
     return(
         <div className="know-more">
             <div id="know-more-start"></div>
-            <div className="title">Saiba Mais</div>
+            <h1 className="title">Saiba Mais</h1>
             <p className='hidden fadein'>
                 Meu nome é Nicolas Ciuffi de Moura, moro em Atibaia-SP.<br></br>
                  Faço faculdade de engenharia de computação, mas já possuo um diploma como técnico em desenvolvimento de sistemas.<br></br>
