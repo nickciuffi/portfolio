@@ -17,18 +17,25 @@
           position: absolute;
         }
         .pre{
-          top: 15%;
+          height: calc(50% - 102.5px);
+          top: 0%;
+          display: flex;
+          align-items: center;
           left:8%;
           opacity: 0;
           animation: show-from-left-mob 3s forwards;
         }
         .pos{
-          bottom: 15%;
+          bottom: 0;
           right: 8%;
+          height: calc(50% - 102.5px);
           opacity: 0;
           animation: show-from-right-mob 3s forwards;
-          
+          text-align: end;
+          display: flex;
+          align-items: center;
           animation-delay: 1s;
+          max-width: 65%;
         }
         
         .name-cont{
@@ -72,7 +79,7 @@
         bottom: 13%;
         right: 8%;
         text-align: end;
-        max-width: 60%;
+        max-width: 50%;
         height: 12%;
         display: flex;
         align-items: center;

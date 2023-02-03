@@ -17,7 +17,7 @@ export function NameShower(props: NameShowerProps){
       <p className='name'>NICOLAS CIUFFI</p>
       </div>    
      
-      <p className='pos name-comp'>Engenheiro de computação</p>  
+      <p className='pos name-comp'>Futuro Engenheiro de computação</p>  
       <KnowMoreBtn hasKnowMoreChanged={props.HasKnowMoreChanged} isActive={props.KnowMoreActive} />
       </div>
     )
