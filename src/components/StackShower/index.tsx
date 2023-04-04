@@ -42,8 +42,8 @@ export default function StackShower(){
                    <TechGroup 
                    leftImg={IconReact}
                    leftText={"ReactJs"}
-                   centerImg={IconPrisma}
-                   centerText={"Prisma"}
+                   centerImg={IconTs}
+                   centerText={"TypeScript"}
                    rightImg={IconNext}
                    rightText={"NextJs"}
                    activated={frontActivated}
@@ -56,10 +56,10 @@ export default function StackShower(){
                     <div className="central-line mobile-hide"></div>
                 <div className="back hidden right">
                     <TechGroup 
-                     leftImg={IconTs}
-                     leftText={"TypeSript"}
-                     centerImg={IconDocker}
-                     centerText={"Docker"}
+                     leftImg={IconDocker}
+                     leftText={"Docker"}
+                     centerImg={IconPrisma}
+                     centerText={"Prisma"}
                      rightImg={IconFirebase}
                      rightText={"Firebase"}
                     activated={backActivated} 
