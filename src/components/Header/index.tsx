@@ -66,10 +66,6 @@ export default function Header(props: HeaderProps){
         </>
 
     )
-      Projetos
-       </a>
-        </div>
-        </>
+      
 
-    )
 }
