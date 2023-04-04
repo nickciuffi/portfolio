@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.scss'
 import { KnowMore } from './components/KnowMore';
 import { NameShower } from './components/NameShower'
+import {Analytics} from '@vercel/analytics/react'
 const Header = React.lazy(() =>import('./components/Header'))
 const ProjectsShower = React.lazy(() => import('./components/ProjectsShower'));
 const StackShower = React.lazy(() => import('./components/StackShower'));
@@ -33,7 +34,7 @@ function App() {
         if(entry.isIntersecting) countToKnowMore()
         if(!entry.isIntersecting) {
           setKnowMoreActive(false);
-          console.log(TimeOutId)
+        
           for(let i = 0; i < TimeOutId; i++){
           clearTimeout(TimeOutId);
           }
@@ -71,6 +72,7 @@ function App() {
     }, [])
 
   return (
+    <>
     <div className="container">
        <div id='top'/>
       <Header isVisible={isHeaderVisible} hasHeaderChanged={hasHeaderChanged} />
@@ -80,7 +82,9 @@ function App() {
       <ProjectsShower />
       <Footer />
     </div>
+    <Analytics />
     
+    </>
   )
 
 

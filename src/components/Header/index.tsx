@@ -39,7 +39,6 @@ export default function Header(props: HeaderProps){
                 Projetos
             </a>
             <a className="link mobile-show" href="#" onClick={() => {
-                console.log(isSideVisible)
                 setHasSideChanged(true);
                 setIsSideVisible(true);
                 document.addEventListener('click', handleClick)
